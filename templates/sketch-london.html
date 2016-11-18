@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% import 'google_map.html' as google_map %}
+{% import 'timestamp.html' as timestamp %}
+
+{% block content %}
+    <img class="image--centered image--500" src="{{ url_for('static', filename='sketch-london/1000_sketch_0.jpg') }}">
+
+    {{ timestamp.render('Thursday, November 17, 2016', '#E9002D') }}
+
+    <h1 class="post-title">
+        Sketch afternoon tea and<br>(more importantly)<br>egg pod toilet stalls
+    </h1>
+
+    <!-- curly quotes: ‘’“” -->
+
+    <p class="post-paragraph">
+        I’d told myself I would do something very British for my 1-year Londonversary, but I hadn’t gotten around to it. So when Michelle invited me to afternoon tea, I decided to tag along. The whole affair was a lot more involved than I thought it would be. “Let’s just meet after lunch,” I suggested, and Michelle balked and told me that I should probably plan to skip all other meals of the day if I decided to have afternoon tea that day.
+    </p>
+
+    <p class="post-paragraph">
+        She suggested a few different places: Langham, Claridge’s, and Sketch. I Yelped them all, and they all looked good, but after reading review after review about proper service and lovely tea and delightful cakes, I was fascinated by a litany of reviews mentioning the futuristic toilets at Sketch. “Sketch is a collection of fancy toilets conveniently located nearby a restaurant,” said Tim O. in <a href="https://www.yelp.co.uk/biz/sketch-london-2?hrid=td4m90IBF5FXBRHEA9Di3g" target="_blank">his review</a>. Another reviewer <a href="https://www.yelp.co.uk/biz/sketch-london-2?hrid=M_Cio5qB-1BcZsxpWd2lOA" target="_blank">waxed poetic</a> about Sketch’s “awesome individual egg shaped toilets with soothing bird chirps to sing you to poops.” After perusing through many many reviews, I, too, was stoked to experience <a href="https://www.yelp.co.uk/biz/sketch-london-2?hrid=zR70Ss6_kV3HsnGwF63UEA" target="_blank">“being in ‘cocoon: the movie.’”</a>
+    </p>
+
+    <p class="post-paragraph">
+        Sketch is conveniently located in Soho, but there was some construction going on in the area and it took me a while to find it. It didn’t help that the entryway might comfortably fit into a C. S. Lewis installation, what with the heavy dark felt curtaining the mouth of the entrance, which then yawns into a surprisingly pleasant leafy corridor.
+    </p>
+
+    {{ google_map.render(51.5127237, -0.1437166) }}
+
+    <p class="post-paragraph">
+        The toilet pods were indeed futuristic.
+    </p>
+
+    <div class="flex-row sm-full-width">
+        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_2.jpg') }}">
+        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_3.jpg') }}">
+    </div>
+
+    <div class="flex-row sm-full-width">
+        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_5.jpg') }}">
+        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_4.jpg') }}">
+    </div>
+
+    <p class="post-paragraph">
+        The next day at work, during lunch at the pub, I broached the subject of afternoon tea. It was a polite excuse to start yammering on about Sketch and trick people into looking at pictures of toilets before their food arrived - sort of like when you ask someone how their weekend went, not because you’re <i>actually</i> curious, but because you just want to start sharing stories about <i>your</i> weekend.
+    </p>
+
+    <p class="post-paragraph">
+        Well, Charlie shared some opinions about afternoon tea in London (Brown’s, Lanesborough, one of which is supposedly frequented by a lot of Russions, I forget which) and I eagerly interjected: “and Sketch - have you heard of Sketch?” Charlie paused, frowned, and said: “Ah, the tea room for children!” He is wrong, of course. Sketch is for adults, too. Adults who like futuristic cocoon toilets and infinitely refillable tarts.
+    </p>
+
+    <p class="post-paragraph">
+        Yes, Sketch servces food, too. Here is a gif of me playing with a pink marshmallow. It had the pleasant squishiness of a flaccid penis.
+    </p>
+
+    <img class="image--centered image--250" src="{{ url_for('static', filename='sketch-london/marshmallow.gif') }}">
+
+    <p class="post-paragraph">
+        And below are pictured the famous refillable sandwiches and tarts. Do not be fooled - they bring you more food after you have finished the sandwiches and tarts, sush as scones and cakes. So pace yourself!
+    </p>
+
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='sketch-london/1000_sketch_1.jpg') }}">
+
+{% endblock %}

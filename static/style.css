@@ -1,0 +1,298 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover, a:visited {
+    color: inherit;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 100%;
+}
+
+.flex-fixed {
+    flex: none;
+}
+
+.flex-item {
+    flex-grow: 1;
+}
+
+.col-a .title {
+    width: 100%;
+}
+
+.splash {
+    height: 100%;
+}
+
+.splash .title {
+    width: 100%;
+}
+
+.title {
+    background: #000;
+    color: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.title p, .title h1 {
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.col-a .title p {
+    font-size: 24px;
+    letter-spacing: 4px;
+}
+
+.splash .title h1 {
+    font-size: 48px;
+    letter-spacing: 8px;
+}
+
+.title .preposition {
+    font-style: italic;
+}
+
+.col-a .title .preposition {
+    font-size: 20px;
+}
+
+.splash .title .preposition {
+    font-size: 44px;
+    letter-spacing: 6px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.navigation-item {
+    margin: 10px 0;
+}
+
+.destination {
+    text-decoration: underline;
+}
+
+.navigation-item--l1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.navigation-item--l2 {
+    display: none;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid black;
+    letter-spacing: 1px;
+}
+
+.navigation-item--l2.selected {
+    display: inherit;
+}
+
+.navigation-item--l2 a {
+    display: block;
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.col-a .navigation-item--l1 {
+    font-size: 16px;
+}
+
+.col-a .navigation-item--l2 a {
+    font-size: 14px;
+}
+
+.col-a {
+    flex: none;
+}
+
+.col-a--300 {
+    width: 300px;
+}
+
+.col-a--800 {
+    max-width: 800px;
+    width: 100%;
+}
+
+.col-b {
+    order: 2;
+    flex-grow: 1;
+}
+
+.col-b--500 {
+    width: 500px;
+}
+
+.post-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image--centered {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.image--half {
+    width: 50%;
+    min-width: 250px;
+}
+
+.image--250 {
+    width: 250px;
+}
+
+.image--500 {
+    min-width: 50%;
+    max-width: 500px;
+}
+
+.image--1000 {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.timestamp {
+    text-align: center;
+    letter-spacing: 2px; 
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.post-title {
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: 2px;
+}
+
+.post-subtitle {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.post-paragraph {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.post-paragraph a {
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 5px solid #B2FFE4;
+}
+
+.post-paragraph a:hover {
+    padding-bottom: 0;
+    text-decoration: none;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+    .splash .title h1 {
+        font-size: 44px;
+        letter-spacing: 6px;
+    }
+
+    .splash .title .preposition {
+        font-size: 42px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash .title h1 {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+
+    .splash .title .preposition {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+}
+
+.centered-content {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+    .centered-content {
+        max-width: 800px;
+    }
+}
+
+.content {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .sm-full-width {
+        width: 100%
+    }
+
+    .post-title, .post-paragraph {
+        margin: 20px;
+    }
+}
+
+.image--200 {
+    width: 200px;
+}
+
+.text--centered {
+    text-align: center;
+}

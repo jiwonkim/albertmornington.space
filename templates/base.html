@@ -1,0 +1,30 @@
+{% import 'navigation.html' as navigation %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adventures of Albert Mornington</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    {% block styles %}{% endblock %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+
+</head>
+<body>
+    <div class="content flex-row">
+        <div class="col-a col-a--300 sm-full-width">
+            <img class="image--centered" src="{{ url_for('static', filename='300_albertmornington.jpg') }}">
+            <div class="title"><p>adventures <span class="preposition">of</span> albert mornington</p></div>
+
+            {{ navigation.render() }}
+        </div>
+
+        <div class="col-b col-b--500 sm-full-width margin-top-30 margin-bottom-30">
+            <div class="post-content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

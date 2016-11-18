@@ -1,0 +1,99 @@
+{% macro render(selected='') -%}
+    <script>
+        $(document).ready(function() {
+            var selected = '{{ selected }}';
+            if (selected) {
+                $(selected).addClass('selected');
+            }
+            $('.navigation-item--l1 a').click(function() {
+                if ($(this).attr('href') === '') {
+                    $('.navigation-item--l2.selected').removeClass('selected');
+                    $(this).parent().siblings('.navigation-item--l2').addClass('selected');
+                }
+            });
+        });
+    </script>
+    <div class="navigation margin-10">
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="{{ url_for('show_post', post_alias='hello-world') }}">Hello, World</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;">Puttering about in <span class="destination">London</span></a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="{{ url_for('show_post', post_alias='sketch-london') }}">Sketch Afternoon Tea</a>
+                <a href="javascript:;">Mornington Crescent Station</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;">A Wee Bit Farther out from London: <span class="destination">Cycling Weekend Trips</span></a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="javascript:;">London to Brighton</a>
+                <a href="javascript:;">Salisbury to Bath (with Lunch at Stonehenge)</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;">Sheep Watching at <span class="destination">Lake District</span></a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="javascript:;">Unexpectedly Uneventful Scafell Pike Hike</a>
+                <a href="javascript:;">Unexpectedly Eventful Helvellyn Hike</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;">Tailing Albert in <span class="destination">France</span></a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="javascript:;">Kitesurfing in Carqueiranne</a>
+                <a href="javascript:;">Calanques of Cassis</a>
+                <a href="javascript:;">Puy du Fou</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;">Weekend in <span class="destination">Berlin</span></a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="javascript:;">Kit Kat Club</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;">Sheep Watching at <span class="destination">Peak District</span></a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="javascript:;">Stanage Edge (yes it rhymes)</a>
+                <a href="javascript:;">Mam Tor Hike: Rain, Hail, then Sun</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="javascript:;"><span class="destination">Seoul</span> in January</a>
+            </div>
+            <div class="navigation-item--l2">
+                <a href="javascript:;">Freezing Our Butts off Hiking Bukhansan</a>
+                <a href="javascript:;">A Korean Wedding</a>
+            </div>
+        </div>
+
+        <div class="navigation-item">
+            <div class="navigation-item--l1">
+                <a href="{{ url_for('show_post', post_alias='bread-porn') }}">Bread Porn</a>
+            </div>
+        </div>
+    </div>
+{%- endmacro %}

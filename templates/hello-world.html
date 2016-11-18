@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="post-title text--centered">
+        Hello, World! 
+    </h1>
+
+    <div class="profile margin-top-30 margin-bottom-30">
+        <img class="image--centered image--200" src="{{ url_for('static', filename='400_albert_profile.png') }}">
+    </div>
+
+    <h2 class="post-subtitle text--centered">
+        Albert
+    </h2>
+
+    <p class="text--centered">
+        Albert is a doorstop pupper.
+    </p>
+
+    <div class="profile margin-top-30 margin-bottom-30">
+        <img class="image--centered image--200" src="{{ url_for('static', filename='400_mornington_profile.png') }}">
+    </div>
+
+    <h2 class="post-subtitle text--centered">
+        Mornington
+    </h2>
+
+    <p class="text--centered">
+        Mornington is a blue pig that eats coins.
+    </p>
+{% endblock %}

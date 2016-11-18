@@ -1,0 +1,5 @@
+{% macro render(time, color='#666') -%}
+    <div class="timestamp margin-top-30 margin-bottom-30">
+        <span style="color: {{ color }};">{{ time }}</span>
+    </div>
+{%- endmacro %}
