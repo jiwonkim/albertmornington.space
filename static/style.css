@@ -168,6 +168,10 @@ a:hover, a:visited {
     margin: 0 auto;
 }
 
+.post-content .image--centered {
+    margin-bottom: 5px;
+}
+
 .image--centered {
     display: block;
     margin: 0 auto;
@@ -186,6 +190,11 @@ a:hover, a:visited {
 .image--500 {
     min-width: 50%;
     max-width: 500px;
+}
+
+.image--800 {
+    width: 100%;
+    max-width: 800px;
 }
 
 .image--1000 {

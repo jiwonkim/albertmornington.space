@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import 'google_map.html' as google_map %}
+{% import 'timestamp.html' as timestamp %}
+
+{% block content %}
+    <img class="image--centered image--500" src="{{ url_for('static', filename='cassis-france/1000_cassis_0.jpg') }}">
+
+    {{ timestamp.render('May 9, 2016', '#008465') }}
+
+    <h1 class="post-title">
+        Up and Down the Calanques of Cassis
+    </h1>
+
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_3.jpg') }}">
+
+    {{ google_map.render(43.2149612,5.4229805) }}
+
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_1.jpg') }}">
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_4.jpg') }}">
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_5.jpg') }}">
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_6.jpg') }}">
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_2.jpg') }}">
+{% endblock %}
