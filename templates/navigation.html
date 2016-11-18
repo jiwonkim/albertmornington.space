@@ -6,7 +6,7 @@
                 $(selected).addClass('selected');
             }
             $('.navigation-item--l1 a').click(function() {
-                if ($(this).attr('href') === '') {
+                if ($(this).attr('href') === 'javascript:;') {
                     $('.navigation-item--l2.selected').removeClass('selected');
                     $(this).parent().siblings('.navigation-item--l2').addClass('selected');
                 }
