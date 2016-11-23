@@ -7,7 +7,7 @@ application = Flask(__name__)
 
 @application.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('hello-world.html')
 
 @application.route('/post/<post_alias>')
 def show_post(post_alias):
