@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% import 'google_map.html' as google_map %}
+{% import 'timestamp.html' as timestamp %}
+
+{% block content %}
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_0.jpg') }}">
+
+    {{ timestamp.render('May 7, 2016', '#3296ab') }}
+
+    <!-- curly quotes: ‘’“” -->
+
+    <h1 class="post-title">
+        Kitesurfing in Carqueiranne<br>and then Hitchhiking through<br>(Supposedly) Wild Boar-Infested Forest
+    </h1>
+    
+    <p class="post-paragraph">
+        At one point before we were dating I told Albert I would like to visit France soon and Albert told me he would love to show me around. We started talking dates and he said maybe I could join him for the weekend after a good friend’s wedding that was happening in May. I’d never been invited to a wedding before so I decided to invite myself. Albert immediately brought up some points that could make this difficult: he’d already told the bride and groom that he was coming alone, we would have to pretend we were together, and his ex was going to be there as well.
+    </p>
+
+    <p class="post-paragraph">
+        In the end we decided that I would stay in the city of Carqueiranne while Albert attended the wedding on Saturday.
+    </p>
+
+    <div class="flex-row sm-full-width">
+        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/facebook_0.jpg') }}">
+        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/facebook_1.jpg') }}">
+    </div>
+
+    <p class="post-paragraph">
+        I had recently discovered the pleasures of surfing, and I was determined to surf whenever and wherever I could. So I googled “surf carqueiranne” and found this place called <a href="http://www.kitesurf-passion.com/" target="_blank">Kitesurf Passion</a>. I had encountered kitesurfers once before, when Easyjet unexpectedly landed in Porto Santo instead of Madeira during a weekend trip to Portugal, and we were desperate to make up for the lost day while waiting for the ferry ride to the correct island. The kitesurf instructor on Porto Santo had told us, then, that we would have to practice out of the water for the first 9 hours of instruction before we could enter the ocean with a kite. So I was anxious about Kitesurf Passion and made Albert call them to make sure they offered other things, like stand-up paddleboarding, for backup. If I was to be on my own while Albert was at a wedding, I was going to be on my own in the water.
+    </p>
+
+    <p class="post-paragraph">
+        <a href="http://www.seatemperature.org/europe/france/carqueiranne-may.htm" target="_blank">seatemperature.org</a> said that the temperature of the sea would be around 16°C when I planned to visit. Newquay had been 16°C at the end of October 2015 when I surfed with a 3-2 wetsuit (3mm in the torso, 2mm in the limbs). So I decided to take my own 3-2 wetsuit, so that I could avoid renting a wetsuit that many others have peed in. I was squeamish about such things. I had a thicker wetsuit that I’d worn to Bundoran, Ireland in March when the <a href="http://www.seatemperature.org/europe/ireland/bundoran-march.htm" target="_blank">water was around 8°C</a>; but I figured a 3-2 would be more than enough for kitesurfing in Carqueiranne.
+    </p>
+
+    <p class="post-paragraph">
+        Albert drove me to the spot from our airbnb and we had a moment of anxiety when we couldn’t locate Kitesurf Passion past the lesson time. Albert ran around in his smart indigo suit looking dapper while I spotted a van full of what looked like sea-going equipment and ran over as fast as I could. I waved to Albert and I disappeared into the restroom to change into my bathing suit and wetsuit. Since I was the only kitesurfing noob in the group, and also the only person who couldn’t speak French, I was singled out and had a very nice private 1:1 3-hour lesson. The instructor was brilliant. In the span of a couple hours, he’d taught me to steer the kite in figure-eights so that I could use the power of the wind to pull both of us (he was holding onto a handle on the back of my kitesurfing belt thing), and to resurrect a fallen kite off of the water so that I could resume the exciting figure-eights.
+    </p>
+
+    <p class="post-paragraph">
+        After 2 hours in the water with the kite, my (amazing) instructor told me that it was time to get the board. As eager as I was to finally get on the board with the kite instead of having the kite drag my body laborously through the sea water, I had to cop out. I was so cold I could barely talk - my teeth had gone past chattering, and my jaw was clenched so tight I could only speak like a ventriloquist. The 3-2 wetsuit had definitely not been enough.
+    </p>
+
+    <p class="post-paragraph">
+        There were two key differences between surfing and kitesurfing that made surfing in Newquay in a 3-2 perfectly fine, but kitesurfing in Carqueiranne with the same wetsuit unbearably cold. First, surfing involves a lot of cardio. You need to paddle to get out past the whitewash, then paddle around to follow the breaks, and after that, put in an intense burst of paddling to catch that wave. Kitesurfing is not much cardio, more technique with your kite. Second, you mostly stay on top of your board when you’re surfing. Which means most of the time, the majority your body is above the water. I assume kitesurfing is the same way once you know how to kitesurf, but as a beginner, you’re completely inside the water, up to your neck, and sometimes up to the crown of your head.
+    </p>
+
+    <div class="flex-row sm-full-width">
+        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_busstop_0.jpg') }}">
+        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_busstop_1.jpg') }}">
+    </div>
+
+    <p class="post-paragraph">
+    </p>
+{% endblock %}
