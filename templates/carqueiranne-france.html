@@ -2,6 +2,10 @@
 {% import 'google_map.html' as google_map %}
 {% import 'timestamp.html' as timestamp %}
 
+{% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='video.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     <img class="image--centered image--1000" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_0.jpg') }}">
 
@@ -39,6 +43,16 @@
     </p>
 
     <h2>tldr; I started to learn kitesurfing, but did not get to unlock the Board</h2>
+
+    <div class="post-video">
+        <video class="full-width">
+            <source src="{{ url_for('static', filename='carqueiranne-france/kitesurfing.mov') }}">
+        </video>
+        <div class="post-video_overlay">
+            <p class="play-icon">▶</p>
+            <p class="pause-icon hidden">||</p>
+        </div>
+    </div>
 
     <p class="post-paragraph">
         Since I was the only kitesurfing noob in the group, and also the only person who couldn’t speak French, I was singled out and had a very nice private 3-hour lesson. The instructor was brilliant. In the span of a couple hours, he’d taught me to steer the kite in figure-eights so that I could use the power of the wind to pull both of us (he was holding onto a handle on the back of my kitesurfing belt thing), and to resurrect a fallen kite off of the water so that I could resume the exciting figure-eights. After 2 hours in the water with the kite, my (amazing) instructor told me that it was time to get the board. As eager as I was to finally level up and unlock the Board, I had to call it quits. I was so cold I could barely talk - my teeth had gone past chattering, and my jaw was clenched so tight I could only speak like a ventriloquist. The 3-2 wetsuit had most <i>definitely</i> not been enough.
