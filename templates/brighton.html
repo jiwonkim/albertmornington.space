@@ -3,9 +3,9 @@
 {% import 'timestamp.html' as timestamp %}
 
 {% block content %}
-    <img class="image--centered image--1000" src="">
+    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_0.jpg') }}">
 
-    {{ timestamp.render('March 12, 2016', 'green') }}
+    {{ timestamp.render('March 12, 2016', '#207591') }}
 
     <h1 class="post-title">
         Tailing Albert to Brighton:<br>a tale of sore butts, lust, and 4 flat tires
@@ -18,5 +18,15 @@
     </p>
 
     <p class="post-paragraph">
+        From 2013 to 2015, I let my then-boyfriend-and-roommate use my bike, since he had no qualms riding a bike without brakes (he argued that it <i>did</i> have brakes, it was a fixie after - you just had to fight the pedals to slow down). Besides, his workplace was 0.9 miles from home (just enough to qualify for the living-close-to-work rent subsidy) so he wouldn’t be covering much distance anyway.
     </p>
+
+    <p class="post-paragraph">
+        When I moved to London, my company offered to ship a big shipping-container-ful of stuff over. I fitted my bike with a rear brake and shipped it over, just in case. From October 2015 to February 2016 it lay neglected in my back yard, until Albert came over to fix it up for our big trip. We (read: he) fitted front and back fenders and plumped my wheels while we (read: I) watched three epidoes of House of Cards projected onto the wall.
+    </p>
+
+    <p>
+    </p>
+
+    {{ google_map.render(50.8327534, -0.1743397) }}
 {% endblock %}
