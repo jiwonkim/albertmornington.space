@@ -1,11 +1,11 @@
-{% macro render(lat, lng) -%}
+{% macro render(lat, lng, zoom=13) -%}
     <div id="map" class="margin-top-30 margin-bottom-30"></div>
 
     <script>
       function initMap() {
         var latlng = {lat: {{ lat }}, lng: {{ lng }}};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
+          zoom: {{ zoom }},
           center: latlng,
           mapTypeControl: false,
           scrollwheel: false,
