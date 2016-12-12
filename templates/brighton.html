@@ -3,7 +3,22 @@
 {% import 'timestamp.html' as timestamp %}
 
 {% block content %}
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_0.jpg') }}">
+    <script>
+        $(document).ready(function() {
+            var pixelatedImages = $('.image--pixelated');
+            $.each(pixelatedImages, function(index, elem) {
+                var $image = $(elem);
+                var highresSrc = $image.attr('src').replace('_pixelated.png', '.jpg');
+
+                var highres = new Image();
+                highres.onload = function() {
+                    $image.attr('src', highresSrc)
+                };
+                highres.src = highresSrc;
+            });
+        });
+    </script>
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_0_pixelated.png') }}">
 
     {{ timestamp.render('March 12, 2016', '#207591') }}
 
@@ -37,11 +52,11 @@
         Muddy, unpaved roads were my biggest enemy. I’d only ever ridden my bike on paved and gloriously straight Californian roads and learned quickly that 28mm road bike tires with barely any tread were not well suited for gravelly, muddy country roads.
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_2.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_2_pixelated.png') }}">
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_3.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_3_pixelated.png') }}">
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_4.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_4_pixelated.png') }}">
 
     <p class="post-paragraph">
         We took a quick standing snack break when we passed Gatwick, the halfway point. We counted maybe five or six planes pass above our heads while I realized granola raspberry cookies were in fact the most delicious food in the world.
@@ -95,9 +110,9 @@
         We took a nice walk out to catch the last of the daylight and grab dinner and I had to fight the urge to hold Albert’s hand.
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_5.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_5_pixelated.png') }}">
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_6.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_6_pixelated.png') }}">
 
     <p class="post-paragraph">
         The ravaging came later. We watched the season 2 finale for House of Cards and discussed the episode. We did the mundane stuff like brushing teeth and washing faces, and then climbed onto the shared bed. A leg massage turned into a butt massage, then a nude massage. I took off my mouth guard (for very important protection against griding teeth), placed it on the window sill, and then kissed Albert.
@@ -107,16 +122,16 @@
         The next morning was slightly awkward. We stayed in bed for a little bit, looking at our phone on respective sides of the bed, and headed out for brunch. The listing we found had a bad GPS coordinate, and we were led to a sketchy part of Brighton that had a lot of poor-quality tagging on dirty walls smelling like piss.
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_7.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_7_pixelated.png') }}">
 
     <p class="post-paragraph">
         Brunch was divine, so it made up for everything. It was this place called <a href="https://www.yelp.co.uk/biz/bills-brighton" target="_blank">Bill’s</a>:
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_8.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_8_pixelated.png') }}">
 
     <p class="post-paragraph">
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='brighton/1000_brighton_9.jpg') }}">
+    <img class="image--centered image--1000 image--pixelated" src="{{ url_for('static', filename='brighton/1000_brighton_9_pixelated.png') }}">
 {% endblock %}
