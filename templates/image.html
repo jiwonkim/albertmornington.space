@@ -1,0 +1,7 @@
+{% macro render_centered(filename, display_size, aspect_ratio_percentage) -%}
+    <div class="image--centered image--{{ display_size }} image--respect-ar image--respect-ar-{{ aspect_ratio_percentage }}-percent">
+        <div class="image-wrapper">
+            <img class="image--pixelated" src="{{ url_for('static', filename=filename) }}">
+        </div>
+    </div>
+{%- endmacro %}

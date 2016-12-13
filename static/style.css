@@ -207,6 +207,40 @@ a:hover, a:visited {
     max-width: 100%;
 }
 
+.image--respect-ar {
+    position: relative;
+}
+
+.image--respect-ar .image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.image--respect-ar .image--pixelated {
+    width: 100%;
+}
+
+.image--respect-ar:before {
+    display: block;
+    content: "";
+    width: 100%;
+}
+
+.image--respect-ar-68-percent:before {
+    padding-top: 68%;
+}
+
+.image--respect-ar-75-percent:before {
+    padding-top: 75%;
+}
+
+.image--respect-ar-100-percent:before {
+    padding-top: 100%;
+}
+
 .timestamp {
     text-align: center;
     letter-spacing: 2px; 
@@ -309,4 +343,7 @@ a:hover, a:visited {
 
 .text--centered {
     text-align: center;
+}
+
+.image-wrapper-container--75 {
 }
