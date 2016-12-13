@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% import 'google_map.html' as google_map %}
+{% import 'image.html' as image %}
 {% import 'timestamp.html' as timestamp %}
 
 {% block content %}
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_0.jpg') }}">
+    {{ image.render_centered('carqueiranne-france/1000_kitesurfing_0_pixelated.png', 1000, 65) }}
 
     {{ timestamp.render('May 7, 2016', '#3296ab') }}
 
@@ -50,43 +51,41 @@
         My instructor seemed disappointed when I told him I was too cold to continue. He asked if I was sure, and I said yes, filled with guilt and shame. But soon I was too cold to care. I peeled off my wetsuit, hugged myself tightly in a borrowed snuggie, and shivered uncontrollably while the boat went around collecting kitesurfers and their kites. With each additional kitesurfer on board, I got bumped further down towards the nose of the boat. It was a very windy day, and the boat bounced heavily. On one such bounce, I landed and had that “Oh <i>fuck</i>” feeling and knew that my back was not going to be the same for the next few days.
     </p>
     
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_2.jpg') }}">
+    {{ image.render_centered('carqueiranne-france/1000_kitesurfing_2_pixelated.png', 1000, 100) }}
 
     <p class="post-paragraph">
         After saying goodbyes and trying to pretend I wasn’t as destroyed as I was feeling, I beelined to a crepe shop and ordered a savory crepe and a sweet crepe (a two-course crepe meal!) with the point and smile method.
     </p>
 
-    <div class="flex-row sm-full-width">
-        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/1000_crepe_0.jpg') }}">
-        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/1000_crepe_1.jpg') }}">
-    </div>
+    {{ image.render_centered('carqueiranne-france/1000_crepe_0_pixelated.png', 1000, 75) }}
+
+    {{ image.render_centered('carqueiranne-france/1000_crepe_1_pixelated.png', 1000, 75) }}
 
     <p class="post-paragraph">
         Then I found that I missed the last bus back to the airbnb.
     </p>
 
-    <div class="flex-row sm-full-width">
-        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_busstop_0.jpg') }}">
-        <img class="image--centered image--half" src="{{ url_for('static', filename='carqueiranne-france/1000_kitesurfing_busstop_1.jpg') }}">
-    </div>
+    {{ image.render_centered('carqueiranne-france/1000_kitesurfing_busstop_0_pixelated.png', 1000, 133) }}
+
+    {{ image.render_centered('carqueiranne-france/1000_kitesurfing_busstop_1_pixelated.png', 1000, 133) }}
 
     <p class="post-paragraph">
         “This is fine,” I told myself. I actually said it out loud, to see if it would be more convincing if I heard the words. (It was not.) To perpetuate the desired tranquil state of mind, I decided to take a casual stroll and pick a nice bar to hang out by myself, and maybe read the emergency book I carried around for this type of purpose. I located what seemed like a lively downtown area (relatively speaking; Carqueiranne is no London) and after suspiciously loitering around for a good half hour, made my pick and walked upto the bar. The bartender said something in French, I said something in English, and we both stared at each other for a bit. I unsuccessfully tried speaking Spanish (“Vino, por favor!”), then made a failed attempt to mime a wine glass. He made the universal index finger gesture that meant “wait a sec” and called out to a group of people who could have been co-owners or squatters of the bar, I could not tell. Eventually the combination of a very unhelpful but eager “English speaking” lady and google translate helped me get my glass of wine, which turned out to be a single euro! After some book-reading, side-eyeing a sleeping gentleman who was being pranked by his co-owner/squatter friends, I decided I should try getting back to the airbnb.
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='carqueiranne-france/1000_bar_0.jpg') }}">
+    {{ image.render_centered('carqueiranne-france/1000_bar_0_pixelated.png', 1000, 133) }}
 
     <p class="post-paragraph">
         Unfortunately, Plan B did not work out. Taxis did not run. I wondered I should call Albert and see if he could leave the wedding to drive me, but that felt like giving up. I looked up google maps and saw that if I walked, it would take 2.5 hours. It seemed doable. 
     </p>
 
-    <img class="image--centered image--original" src="{{ url_for('static', filename='carqueiranne-france/o_route_0.png') }}">
+    {{ image.render_centered_with_custom_width('carqueiranne-france/o_route_0.png', 649, 113) }}
 
     <p class="post-paragraph">
         What I did not anticipate was the stretch of windy forest road I would have to go through. I reached the edge of the forest just as dusk faded into darkness. I went forward into the forest, and it was really, really, really dark. I retraced my steps back to the last source of light before the forest began - some kind of farmhouse. I cried a little bit. And then I called Albert. He didn’t pick up. I cried a little more, feeling a bit energized by anger. And decided I would walk through the forest. It was just darkness, it wasn’t anything frightening.
     </p>
 
-    <img class="image--centered image--original" src="{{ url_for('static', filename='carqueiranne-france/o_route_1.png') }}">
+    {{ image.render_centered_with_custom_width('carqueiranne-france/o_route_1.png', 513, 140) }}
 
     <p class="post-paragraph">
         After walking for 2 minutes in total darkness save for the sudden flashes of headlight from passing cars, I decided this was not going to work out. I had to hitchhike. I had never hitchhiked in my life, ever. I saw a glimpse of headlight at the beginning of the forest, and hesitantly raised my thumb. The beamers flooded my sight and I thought the car was going to pass by, but it stopped. The woman in the driver’s seat pushed open the passenger door and spoke very fast in French. I stammered out some words, pointed at the map I had screenshotted on my phone. She gestured that I should get in first, so I did.

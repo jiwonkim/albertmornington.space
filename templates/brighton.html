@@ -4,21 +4,6 @@
 {% import 'timestamp.html' as timestamp %}
 
 {% block content %}
-    <script>
-        $(document).ready(function() {
-            var pixelatedImages = $('.image--pixelated');
-            $.each(pixelatedImages, function(index, elem) {
-                var $image = $(elem);
-                var highresSrc = $image.attr('src').replace('_pixelated.png', '.jpg');
-
-                var highres = new Image();
-                highres.onload = function() {
-                    $image.attr('src', highresSrc)
-                };
-                highres.src = highresSrc;
-            });
-        });
-    </script>
     {{ image.render_centered('brighton/1000_brighton_0_pixelated.png', 1000, 75) }}
 
     {{ timestamp.render('March 12, 2016', '#207591') }}
