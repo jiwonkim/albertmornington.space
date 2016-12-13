@@ -1,7 +1,22 @@
 {% macro render_centered(filename, display_size, aspect_ratio_percentage) -%}
     <div class="image--centered image--{{ display_size }} image--respect-ar image--respect-ar-{{ aspect_ratio_percentage }}-percent">
-        <div class="image-wrapper">
+        {{ _render_image_wrapper(filename) }}
+    </div>
+{%- endmacro %}
+
+{% macro render_centered_with_custom_width(filename, width, aspect_ratio_percentage) -%}
+    <div class="image--centered image--original image--respect-ar image--respect-ar-{{ aspect_ratio_percentage }}-percent" style="width: {{ width }}px;">
+        {{ _render_image_wrapper(filename) }}
+    </div>
+{%- endmacro %}
+
+
+{% macro _render_image_wrapper(filename) -%}
+    <div class="image-wrapper">
+        {% if 'pixelated' in filename %}
             <img class="image--pixelated" src="{{ url_for('static', filename=filename) }}">
-        </div>
+        {% else %}
+            <img src="{{ url_for('static', filename=filename) }}">
+        {% endif %}
     </div>
 {%- endmacro %}

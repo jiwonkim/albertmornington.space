@@ -233,6 +233,10 @@ a:hover, a:visited {
     padding-top: 68%;
 }
 
+.image--respect-ar-88-percent:before {
+    padding-top: 88%;
+}
+
 .image--respect-ar-75-percent:before {
     padding-top: 75%;
 }
