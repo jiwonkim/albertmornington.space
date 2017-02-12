@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% import 'google_map.html' as google_map %}
+{% import 'image.html' as image %}
 {% import 'timestamp.html' as timestamp %}
 
 {% block content %}
-    <img class="image--centered image--500" src="{{ url_for('static', filename='cassis-france/1000_cassis_0.jpg') }}">
+    {{ image.render_centered('cassis-france/1000_cassis_0_pixelated.png', 500, 133) }}
 
     {{ timestamp.render('May 9, 2016', '#008465') }}
 
@@ -21,7 +22,7 @@
         Energized by the morning’s events, I was ready to see some pretty sights. And we did see some pretty sights, like this one:
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_3.jpg') }}">
+    {{ image.render_centered('cassis-france/1000_cassis_3_pixelated.png', 1000, 40) }}
 
     <p class="post-paragraph">
         I would describe a calanque as a gorgeous bay in a series of gorgeous bays, walled in by rocky cliffs that are pleasing to the eye. Wikipedia says: “A calanque is a narrow, steep-walled inlet that is developed in limestone, dolomite, or other carbonate strata and found along the Mediterranean coast.”
@@ -33,27 +34,25 @@
         I was surprised to find out that there was hiking involved, and not the kind where you walk along a gently sloping footpath, or even some stairs. To get the most out of your visit to the calanques, you first hike <i>down</i> to see the water and then back up for the view. The hiking trails were delightfully color-coded and marked on rocks, a much better system for distinguishing between different trails than the piles of rock that a lot of English and American hiking trails use, in my opinion. I was wearing Keds, and some old French hikers yelled at me and shook their heads, but it worked out okay. (If it had been raining that would have been a different story, but it was dry.)
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_5.jpg') }}">
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_6.jpg') }}">
+    {{ image.render_centered('cassis-france/1000_cassis_5_pixelated.png', 1000, 75) }}
+    {{ image.render_centered('cassis-france/1000_cassis_6_pixelated.png', 1000, 133) }}
 
     <p class="post-paragraph">
         We had lunch at calanque #3, which is supposed to be the prettiest of all the calanques. There was a conveniently washed up log perfect for sitting on by the water. Since we were in Albert’s territory (France) he planned everything, which meant that we had some French picnic food - baguette with pate. Which tasted better than it looked. Albert bravely wet his feet before I tried wading out. It was May and the water was pretty cold, but we did see some desperate bikini-clad water-goers trying to smile for the camera with clenched, chattering teeth.
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_4.jpg') }}">
+    {{ image.render_centered('cassis-france/1000_cassis_4_pixelated.png', 1000, 75) }}
 
     <p class="post-paragraph">
         After lunch, we hiked back up for the views, and were rewarded with something straight out of a postcard or stock photo. (It is such a shame that any picture that you’ll take in your travels will be inferior to that photo in a 10-cent postcard of the same vista.)
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='cassis-france/1000_cassis_1.jpg') }}">
+    {{ image.render_centered('cassis-france/1000_cassis_1_pixelated.png', 1000, 75) }}
 
     <p class="post-paragraph">
         We made it back downtown in time for an afternoon gelato. And even when the signs told us that we weren’t allowed to hold hands, we did.
     </p>
 
-    <div class="flex-row sm-full-width">
-        <img class="image--centered image--half" src="{{ url_for('static', filename='cassis-france/1000_cassis_7.jpg') }}">
-        <img class="image--centered image--half" src="{{ url_for('static', filename='cassis-france/1000_cassis_2.jpg') }}">
-    </div>
+    {{ image.render_centered('cassis-france/1000_cassis_7_pixelated.png', 1000, 100) }}
+    {{ image.render_centered('cassis-france/1000_cassis_2_pixelated.png', 1000, 100) }}
 {% endblock %}

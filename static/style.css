@@ -229,6 +229,10 @@ a:hover, a:visited {
     width: 100%;
 }
 
+.image--respect-ar-40-percent:before {
+    padding-top: 40%;
+}
+
 .image--respect-ar-65-percent:before {
     padding-top: 68%;
 }

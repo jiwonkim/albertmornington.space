@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% import 'google_map.html' as google_map %}
+{% import 'image.html' as image %}
 {% import 'timestamp.html' as timestamp %}
 
 {% block content %}
-    <img class="image--centered image--500" src="{{ url_for('static', filename='sketch-london/1000_sketch_0.jpg') }}">
+    {{ image.render_centered('sketch-london/1000_sketch_0_pixelated.png', 500, 133) }}
 
     {{ timestamp.render('Tuesday, November 15, 2016', '#E9002D') }}
 
@@ -31,15 +32,11 @@
         The toilet pods were indeed futuristic.
     </p>
 
-    <div class="flex-row sm-full-width">
-        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_2.jpg') }}">
-        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_3.jpg') }}">
-    </div>
+    {{ image.render_centered('sketch-london/1000_sketch_2_pixelated.png', 500, 133) }}
+    {{ image.render_centered('sketch-london/1000_sketch_3_pixelated.png', 500, 133) }}
 
-    <div class="flex-row sm-full-width">
-        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_5.jpg') }}">
-        <img class="flex-item image--half" src="{{ url_for('static', filename='sketch-london/1000_sketch_4.jpg') }}">
-    </div>
+    {{ image.render_centered('sketch-london/1000_sketch_4_pixelated.png', 500, 133) }}
+    {{ image.render_centered('sketch-london/1000_sketch_5_pixelated.png', 500, 133) }}
 
     <p class="post-paragraph">
         The next day at work, during lunch at the pub, I broached the subject of afternoon tea. It was a polite excuse to start yammering on about Sketch and trick people into looking at pictures of toilets before their food arrived - sort of like when you ask someone how their weekend went, not because you’re <i>actually</i> curious, but because you just want to start sharing stories about <i>your</i> weekend.
@@ -53,12 +50,11 @@
         Yes, Sketch servces food, too. Here is a gif of me playing with a pink marshmallow. It had the pleasant squishiness of a flaccid penis.
     </p>
 
-    <img class="image--centered image--250" src="{{ url_for('static', filename='sketch-london/marshmallow.gif') }}">
+    {{ image.render_centered_with_custom_width('sketch-london/marshmallow.gif', 200, 100) }}
 
     <p class="post-paragraph">
         And below are pictured the famous refillable sandwiches and tarts. Do not be fooled - they bring you more food after you have finished the sandwiches and tarts, sush as scones and cakes. So pace yourself!
     </p>
 
-    <img class="image--centered image--1000" src="{{ url_for('static', filename='sketch-london/1000_sketch_1.jpg') }}">
-
+    {{ image.render_centered('sketch-london/1000_sketch_1_pixelated.png', 1000, 133) }}
 {% endblock %}
