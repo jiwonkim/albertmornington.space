@@ -369,5 +369,13 @@ a:hover, a:visited {
     text-align: center;
 }
 
-.image-wrapper-container--75 {
+.caption {
+    font-size: 14px;
+    line-height: 24px;
+    color: #999;
+}
+
+.caption--500 {
+    width: 500px;
+    margin: 0 auto;
 }
