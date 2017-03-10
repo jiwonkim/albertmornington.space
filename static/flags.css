@@ -1,0 +1,84 @@
+.sprite {
+    background-image: url(/static/flags/sprite.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 3px 0;
+}
+
+.sprite-brazil {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -5px;
+}
+
+.sprite-canada {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -55px;
+}
+
+.sprite-france {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -105px;
+}
+
+.sprite-germany {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -155px;
+}
+
+.sprite-italy {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -205px;
+}
+
+.sprite-korea {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -255px;
+}
+
+.sprite-mexico {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -305px;
+}
+
+.sprite-morocco {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -355px;
+}
+
+.sprite-netherlands {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -405px;
+}
+
+.sprite-portugal {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -455px;
+}
+
+.sprite-spain {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -505px;
+}
+
+.sprite-uk {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -555px;
+}
+
+.sprite-us {
+    width: 60px;
+    height: 40px;
+    background-position: -5px -605px;
+}

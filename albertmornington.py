@@ -7,6 +7,10 @@ application = Flask(__name__)
 
 @application.route('/')
 def index():
+    return render_template('index.html')
+
+@application.route('/hello')
+def hello():
     return render_template('hello-world.html')
 
 @application.route('/post/<post_alias>')

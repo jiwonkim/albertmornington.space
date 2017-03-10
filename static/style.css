@@ -65,6 +65,10 @@ a:hover, a:visited {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+.title--medium {
+    font-size: 22px;
+}
+
 .title p, .title h1 {
     margin: 0;
     padding: 5px 10px;
@@ -383,4 +387,25 @@ a:hover, a:visited {
 .caption--500 {
     width: 500px;
     margin: 0 auto;
+}
+
+.floating-content {
+    max-width: 448px;
+    margin: 30px auto;
+}
+
+.navigation--flag-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navigation--timeline-view {
+    padding: 10px 0;
+}
+
+.navigation--timeline-view .axis {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
 }

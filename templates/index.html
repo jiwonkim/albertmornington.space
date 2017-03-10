@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adventures of Albert Mornington</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='flags.css') }}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='d3.v2.js') }}"></script>
+
+    <script type="text/javascript">
+        var timelineData = [
+            {
+                'timestamp': 1457740800,
+                'date_string': '12 Mar',
+                'year': 2016,
+                'title': 'cycling trip to brighton',
+                'link': '/post/brighton',
+                'country': 'uk'
+            },
+            {
+                'timestamp': 1462579200,
+                'date_string': '7 May',
+                'year': 2016,
+                'title': 'kitesurfing in carqueiranne',
+                'link': '/post/carqueiranne-france',
+                'country': 'france'
+            },
+            {
+                'timestamp': 1462752000,
+                'date_string': '9 May',
+                'year': 2016,
+                'title': 'calanques of cassis',
+                'link': '/post/cassis-france',
+                'country': 'france'
+            },
+            {
+                'timestamp': 1484697600,
+                'date_string': '18 Jan',
+                'year': 2017,
+                'title': 'hiking bukhansan',
+                'link': '/post/bukhansan-seoul',
+                'country': 'korea'
+            }
+        ];
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='timeline.js') }}"></script>
+</head>
+<body>
+    <div class="floating-content">
+        <div class="title title--medium">
+            <p>adventures <span class="preposition">of</span> albert mornington</p>
+        </div>
+
+        <div class="navigation--flag-view">
+            <i class="flag sprite sprite-uk"></i>
+            <i class="flag sprite sprite-france"></i>
+            <i class="flag sprite sprite-korea"></i>
+            <i class="flag sprite sprite-germany"></i>
+            <i class="flag sprite sprite-morocco"></i>
+            <i class="flag sprite sprite-spain"></i>
+            <i class="flag sprite sprite-us"></i>
+        </div>
+
+        <div class="navigation--timeline-view"></div>
+    </div>
+</body>
+</html>
