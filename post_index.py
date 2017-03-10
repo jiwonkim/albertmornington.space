@@ -5,5 +5,6 @@ POST_ALIASES = set([
     'carqueiranne-france',
     'cassis-france',
     'hello-world',
+    'moving-to-sf',
     'sketch-london',
 ])

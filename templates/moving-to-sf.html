@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import 'google_map.html' as google_map %}
+{% import 'image.html' as image %}
+{% import 'timestamp.html' as timestamp %}
+
+{% block content %}
+    {{ image.render_centered('moving-to-sf/1200_sf_0_pixelated.png', 1200, 100) }}
+
+    {{ timestamp.render('March 4, 2017', '#000') }}
+
+    <h1 class="post-title">
+        The Big Move From London to San Francisco:<br>from one unaffortable city to another
+    </h1>
+
+    <!-- curly quotes: ‘’“” -->
+
+    <p class="post-paragraph">
+        To Ostritch or not, that was the question. When I had first moved to London,
+    </p>
+{% endblock %}

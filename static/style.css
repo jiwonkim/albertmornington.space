@@ -202,6 +202,11 @@ a:hover, a:visited {
     max-width: 1000px;
 }
 
+.image--1200 {
+    width: 100%;
+    max-width: 1200px;
+}
+
 .image--original {
     width: auto;
     max-width: 100%;
