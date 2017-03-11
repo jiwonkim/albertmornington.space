@@ -424,3 +424,13 @@ a:hover, a:visited {
 .navigation--timeline-view .tick line {
     stroke-width: 1px;
 }
+
+.navigation--timeline-view .post-tick {
+    stroke: #5dbf8c;
+    stroke-width: 5px;
+    cursor: pointer;
+}
+
+.navigation--timeline-view .post-tick:hover {
+    stroke: #e9002d;
+}
