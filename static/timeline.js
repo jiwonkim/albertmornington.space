@@ -11,16 +11,29 @@ $(document).ready(() => {
             .attr('height', HEIGHT);
 
     const minT = d3.min(timelineData, (d) => d.timestamp);
-    const scale = d3.scaleTime()
+    const timelineScale = d3.scaleTime()
         .domain([
-            new Date((minT - SECONDS_IN_MONTH) * 1000),
             new Date(),
+            new Date((minT - SECONDS_IN_MONTH) * 1000)
         ])
-        .range([MARGIN_BOTTOM, HEIGHT - MARGIN_TOP]);
+        .range([MARGIN_TOP, HEIGHT - MARGIN_BOTTOM]);
 
     let tickValues = timelineData.map((d) => d.timestamp);
 
-    const axis = d3.axisLeft(scale);
+    let timelineTickFormat = (d) => {
+        const month = d.getMonth();
+        if (month === 0) {
+            return d3.timeFormat('%Y')(d);
+        }
+        if (month % 3 !== 0) {
+            return '';
+        }
+        return d3.timeFormat('%b')(d);
+    }
+
+    const axis = d3.axisLeft(timelineScale)
+        .ticks(d3.timeMonth.every(1))
+        .tickFormat(timelineTickFormat);
 
     timeline.append('g')
         .attr('class', 'axis')

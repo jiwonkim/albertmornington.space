@@ -409,3 +409,18 @@ a:hover, a:visited {
     stroke: black;
     stroke-width: 2px;
 }
+
+.navigation--timeline-view .domain {
+    stroke-width: 1px;
+}
+
+.navigation--timeline-view .tick text {
+    stroke: none;
+    fill: #000;
+    font-size: 10px; 
+    font-family: Ubuntu;
+}
+
+.navigation--timeline-view .tick line {
+    stroke-width: 1px;
+}
