@@ -8,43 +8,11 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='flags.css') }}">
 
     <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='d3.v2.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='d3.v4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='date.format.js') }}"></script>
 
     <script type="text/javascript">
-        var timelineData = [
-            {
-                'timestamp': 1457740800,
-                'date_string': '12 Mar',
-                'year': 2016,
-                'title': 'cycling trip to brighton',
-                'link': '/post/brighton',
-                'country': 'uk'
-            },
-            {
-                'timestamp': 1462579200,
-                'date_string': '7 May',
-                'year': 2016,
-                'title': 'kitesurfing in carqueiranne',
-                'link': '/post/carqueiranne-france',
-                'country': 'france'
-            },
-            {
-                'timestamp': 1462752000,
-                'date_string': '9 May',
-                'year': 2016,
-                'title': 'calanques of cassis',
-                'link': '/post/cassis-france',
-                'country': 'france'
-            },
-            {
-                'timestamp': 1484697600,
-                'date_string': '18 Jan',
-                'year': 2017,
-                'title': 'hiking bukhansan',
-                'link': '/post/bukhansan-seoul',
-                'country': 'korea'
-            }
-        ];
+        var timelineData = JSON.parse('{{ timeline_data|safe }}');
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='timeline.js') }}"></script>
 </head>

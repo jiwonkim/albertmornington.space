@@ -1,13 +1,22 @@
+import redis
+import simplejson
+from db.post import get_timeline_data
 from flask import abort
 from flask import Flask
 from flask import render_template
 from post_index import POST_ALIASES
 
+r = redis.StrictRedis(host='127.0.0.1', charset="utf-8", decode_responses=True)
+
 application = Flask(__name__)
 
 @application.route('/')
 def index():
-    return render_template('index.html')
+    timeline_data = get_timeline_data(r)
+    return render_template(
+        'index.html',
+        timeline_data=simplejson.dumps(timeline_data),
+    )
 
 @application.route('/hello')
 def hello():
