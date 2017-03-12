@@ -426,11 +426,27 @@ a:hover, a:visited {
 }
 
 .navigation--timeline-view .post-tick {
-    stroke: #5dbf8c;
+    fill: none;
+    stroke: #e9002d;
+    /*stroke: #5dbf8c;*/
     stroke-width: 5px;
     cursor: pointer;
 }
 
-.navigation--timeline-view .post-tick:hover {
-    stroke: #e9002d;
+.navigation--timeline-view .post-underline {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 1px;
+}
+
+.navigation--timeline-view .post-title {
+    font-size: 14px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navigation--timeline-view .post-title:hover {
+    fill: #e9002d;
 }
