@@ -10,6 +10,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='d3.v4.min.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='date.format.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bounce.min.js') }}"></script>
 
     <script type="text/javascript">
         var timelineData = JSON.parse('{{ timeline_data|safe }}');
@@ -21,21 +22,24 @@
 </head>
 <body>
     <div class="floating-content">
-        <div class="title title--medium">
+        <div class="title title--medium h-flex h-justify-space-between">
             <p>adventures <span class="preposition">of</span> albert mornington</p>
+            <a class="arrow arrow--down" href="javascript:;">↓</a>
         </div>
 
-        <div class="navigation--flag-view">
-            <i class="flag sprite sprite-uk" data-site="uk"></i>
-            <i class="flag sprite sprite-france" data-site="france"></i>
-            <i class="flag sprite sprite-korea" data-site="korea"></i>
-            <i class="flag sprite sprite-germany" data-site="germany"></i>
-            <i class="flag sprite sprite-morocco" data-site="morocco"></i>
-            <i class="flag sprite sprite-spain" data-site="spain"></i>
-            <i class="flag sprite sprite-us" data-site="us"></i>
-        </div>
+        <div class="navigation--timeline h-invisible h-full-width">
+            <div class="navigation--flag-view">
+                <i class="flag sprite sprite-uk" data-site="uk"></i>
+                <i class="flag sprite sprite-france" data-site="france"></i>
+                <i class="flag sprite sprite-korea" data-site="korea"></i>
+                <i class="flag sprite sprite-germany" data-site="germany"></i>
+                <i class="flag sprite sprite-morocco" data-site="morocco"></i>
+                <i class="flag sprite sprite-spain" data-site="spain"></i>
+                <i class="flag sprite sprite-us" data-site="us"></i>
+            </div>
 
-        <div class="navigation--timeline-view"></div>
+            <div class="navigation--timeline-view"></div>
+        </div>
     </div>
 </body>
 </html>

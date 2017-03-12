@@ -83,20 +83,18 @@ $(document).ready(() => {
 
             const link = selection.append('text')
                 .attr('x', MARGIN_LEFT + POST_TICK_LENGTH)
-                .attr('y', yOffset - 5)
+                .attr('y', yOffset - 5);
+
+            link.append('tspan')
                 .attr('class', 'post-title')
                 .text(post.title.toLowerCase())
                 .on('click', () => {
                     window.location = post.url;
                 });
 
-            const linkWidth = link.node().getComputedTextLength();
-
-            selection.append('text')
-                .attr('x', MARGIN_LEFT + POST_TICK_LENGTH + linkWidth + 5)
-                .attr('y', yOffset - 5)
+            link.append('tspan')
                 .attr('class', 'post-site')
-                .text('• ' + post.site.toLowerCase());
+                .text(' • ' + post.site.toLowerCase());
         });
     }
 
@@ -146,6 +144,45 @@ $(document).ready(() => {
 			_deselect($flag);
         } else {
 			_select($flag)
+        }
+    });
+
+    const $navigation = $('.navigation--timeline');
+    const navigationHeight = $navigation.height();
+    const navigationOffset = $navigation.offset().top;
+    const bounceDown = new Bounce();
+    bounceDown.translate({
+        from: {x: 0, y: 0},
+        to: {x: 0, y: navigationHeight + navigationOffset},
+        duration: 2000,
+        delay: 10,
+        stiffness: 1
+    });
+    const bounceUp = new Bounce();
+    bounceUp.translate({
+        from: {x: 0, y: navigationHeight + navigationOffset},
+        to: {x: 0, y: 0},
+        duration: 2000,
+        delay: 10,
+        stiffness: 1
+    });
+
+    $navigation.css('position', 'absolute');
+    $navigation.css('top', -1 * navigationHeight);
+    $navigation.removeClass('h-invisible');
+
+    const $arrow = $('.arrow');
+    $arrow.click((e) => {
+        if ($arrow.hasClass('arrow--down')) {
+            bounceDown.applyTo($navigation);
+            $arrow.removeClass('arrow--down')
+                .addClass('arrow--up')
+                .text('↑');
+        } else {
+            bounceUp.applyTo($navigation);
+            $arrow.removeClass('arrow--up')
+                .addClass('arrow--down')
+                .text('↓');
         }
     });
 });

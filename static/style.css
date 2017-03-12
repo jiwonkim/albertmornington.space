@@ -63,6 +63,8 @@ a:hover, a:visited {
     background: #000;
     color: #fff;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: relative;
+    z-index: 1000;
 }
 
 .title--medium {
@@ -391,7 +393,8 @@ a:hover, a:visited {
 
 .floating-content {
     max-width: 448px;
-    margin: 30px auto;
+    margin: 0 auto;
+    position: relative;
 }
 
 .navigation--flag-view {
@@ -476,4 +479,26 @@ a:hover, a:visited {
 
 .navigation--timeline-view .post.post--dimmed .post-title {
     fill: #ccc;
+}
+
+.h-flex {
+    display: flex;
+}
+
+.h-justify-space-between {
+    justify-content: space-between;
+}
+
+.title .arrow {
+    margin: 5px 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.h-invisible {
+    visibility: hidden;
+}
+
+.h-full-width {
+    width: 100%;
 }
