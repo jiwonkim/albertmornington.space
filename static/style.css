@@ -400,6 +400,15 @@ a:hover, a:visited {
     justify-content: space-between;
 }
 
+.navigation--flag-view .flag {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.navigation--flag-view .flag:hover {
+    opacity: 1;
+}
+
 .navigation--timeline-view {
     padding: 10px 0;
 }
@@ -452,5 +461,15 @@ a:hover, a:visited {
 }
 
 .navigation--timeline-view .post-site {
+    fill: #ccc;
+}
+
+.navigation--timeline-view .post.post--dimmed .post-tick,
+.navigation--timeline-view .post.post--dimmed .post-underline
+{
+    stroke: #ddd;
+}
+
+.navigation--timeline-view .post.post--dimmed .post-title {
     fill: #ccc;
 }

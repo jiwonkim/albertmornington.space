@@ -1,17 +1,17 @@
+const WIDTH = 448;
+const HEIGHT = 500;
+
+// margin around the timeline
+const MARGIN_LEFT = 50;
+const MARGIN_RIGHT = 20;
+const MARGIN_TOP = 10, MARGIN_BOTTOM = 10;
+
+const POST_TICK_LENGTH = 30;
+const POST_HEIGHT = 25;
+
+const SECONDS_IN_MONTH = 2592000;
+
 $(document).ready(() => {
-    const WIDTH = 448;
-    const HEIGHT = 500;
-
-    // margin around the timeline
-    const MARGIN_LEFT = 50;
-    const MARGIN_RIGHT = 20;
-    const MARGIN_TOP = 10, MARGIN_BOTTOM = 10;
-
-    const POST_TICK_LENGTH = 30;
-    const POST_HEIGHT = 25;
-
-    const SECONDS_IN_MONTH = 2592000;
-
     const timelineTickFormat = function(d) {
         const month = d.getMonth();
         if (month === 0) {
@@ -92,7 +92,13 @@ $(document).ready(() => {
     const posts = timeline.selectAll('.post')
       .data(timelineData)
       .enter().append('g')
-        .attr('class', 'post')
+        .attr('class', function(d) {
+            let classList = ['post'];
+            d.posts.forEach(function(post) {
+                classList.push(`post--${post.site}`);
+            });
+            return classList.join(' ');
+        })
         .attr('transform', function(d) {
             const date = new Date(d.timestamp * 1000);
             return 'translate(0, ' + timelineScale(date) + ')';
@@ -100,4 +106,10 @@ $(document).ready(() => {
         .each(function(d, i) {
             renderPostsForDataPoint(d3.select(this), d);
         });
+
+    $('.flag').click(evt => {
+        const site = $(evt.target).attr('data-site');
+        $('.post').not(`.post--${site}`).addClass('post--dimmed');
+        $(`.post--${site}`).removeClass('post--dimmed');
+    });
 });
