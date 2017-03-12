@@ -18,7 +18,7 @@ function _getTimelineDateDomain() {
 function _getTimelineHeightFromDateDomain(domain) {
 	const timeDiff = Math.abs(domain[1].getTime() - domain[0].getTime());
 	const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-	return diffDays;
+	return Math.ceil(diffDays * 1.5);
 }
 
 function _deselect($flag) {
