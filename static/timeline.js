@@ -21,6 +21,24 @@ function _getTimelineHeightFromDateDomain(domain) {
 	return diffDays;
 }
 
+function _deselect($flag) {
+	if ($flag) {
+		$flag.removeClass('flag--selected');
+	} else {
+		$('.flag--selected').removeClass('flag--selected');
+	}
+	$('.post').removeClass('post--dimmed');
+}
+
+function _select($flag) {
+	$('.flag').removeClass('flag--selected');
+	$flag.addClass('flag--selected');
+
+	const site = $flag.attr('data-site');
+	$('.post').not(`.post--${site}`).addClass('post--dimmed');
+	$(`.post--${site}`).removeClass('post--dimmed');
+}
+
 $(document).ready(() => {
     const domain = _getTimelineDateDomain();
 
@@ -125,15 +143,15 @@ $(document).ready(() => {
     $('.flag').click(evt => {
         const $flag = $(evt.target);
         if ($flag.hasClass('flag--selected')) {
-            $flag.removeClass('flag--selected');
-            $('.post').removeClass('post--dimmed');
+			_deselect($flag);
         } else {
-            $('.flag').removeClass('flag--selected');
-            $flag.addClass('flag--selected');
-
-            const site = $flag.attr('data-site');
-            $('.post').not(`.post--${site}`).addClass('post--dimmed');
-            $(`.post--${site}`).removeClass('post--dimmed');
+			_select($flag)
         }
     });
+});
+
+$(document).keyup(e => {
+	if (e.which == 27) {
+		_deselect();
+	}
 });
