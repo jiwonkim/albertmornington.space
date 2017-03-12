@@ -1,7 +1,3 @@
-const WIDTH = 448;
-const HEIGHT = 500;
-
-// margin around the timeline
 const MARGIN_LEFT = 50;
 const MARGIN_RIGHT = 20;
 const MARGIN_TOP = 10, MARGIN_BOTTOM = 10;
@@ -11,7 +7,26 @@ const POST_HEIGHT = 25;
 
 const SECONDS_IN_MONTH = 2592000;
 
+function _getTimelineDateDomain() {
+    const minT = d3.min(timelineData, d => d.timestamp);
+    return [
+        new Date(),
+        new Date((minT - SECONDS_IN_MONTH) * 1000)
+    ];
+}
+
+function _getTimelineHeightFromDateDomain(domain) {
+	const timeDiff = Math.abs(domain[1].getTime() - domain[0].getTime());
+	const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+	return diffDays;
+}
+
 $(document).ready(() => {
+    const domain = _getTimelineDateDomain();
+
+    const width = 448;
+    const height = _getTimelineHeightFromDateDomain(domain);
+
     const timelineTickFormat = function(d) {
         const month = d.getMonth();
         if (month === 0) {
@@ -43,7 +58,7 @@ $(document).ready(() => {
                 .datum([
                     {x: MARGIN_LEFT + 1, y: 0},
                     {x: MARGIN_LEFT + POST_TICK_LENGTH, y: yOffset},
-                    {x: WIDTH - MARGIN_RIGHT, y: yOffset},
+                    {x: width - MARGIN_RIGHT, y: yOffset},
                 ])
                 .attr('class', 'post-underline')
                 .attr('d', line);
@@ -70,7 +85,7 @@ $(document).ready(() => {
     const timeline = d3.select('.navigation--timeline-view')
         .append('svg:svg')
             .attr('width', '100%')
-            .attr('height', HEIGHT);
+            .attr('height', height);
 
     const minT = d3.min(timelineData, d => d.timestamp);
     const timelineScale = d3.scaleTime()
@@ -78,7 +93,7 @@ $(document).ready(() => {
             new Date(),
             new Date((minT - SECONDS_IN_MONTH) * 1000)
         ])
-        .range([MARGIN_TOP, HEIGHT - MARGIN_BOTTOM]);
+        .range([MARGIN_TOP, height - MARGIN_BOTTOM]);
 
     const axis = d3.axisLeft(timelineScale)
         .ticks(d3.timeMonth.every(1))
