@@ -48,7 +48,7 @@ $(document).ready(() => {
                 .attr('class', 'post-underline')
                 .attr('d', line);
 
-            selection.append('text')
+            const link = selection.append('text')
                 .attr('x', MARGIN_LEFT + POST_TICK_LENGTH)
                 .attr('y', yOffset - 5)
                 .attr('class', 'post-title')
@@ -56,6 +56,14 @@ $(document).ready(() => {
                 .on('click', () => {
                     window.location = post.url;
                 });
+
+            const linkWidth = link.node().getComputedTextLength();
+
+            selection.append('text')
+                .attr('x', MARGIN_LEFT + POST_TICK_LENGTH + linkWidth + 5)
+                .attr('y', yOffset - 5)
+                .attr('class', 'post-site')
+                .text('• ' + post.site.toLowerCase());
         });
     }
 
