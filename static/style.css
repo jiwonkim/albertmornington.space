@@ -409,6 +409,10 @@ a:hover, a:visited {
     opacity: 1;
 }
 
+.navigation--flag-view .flag.flag--selected {
+    opacity: 1;
+}
+
 .navigation--timeline-view {
     padding: 10px 0;
 }

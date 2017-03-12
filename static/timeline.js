@@ -108,8 +108,17 @@ $(document).ready(() => {
         });
 
     $('.flag').click(evt => {
-        const site = $(evt.target).attr('data-site');
-        $('.post').not(`.post--${site}`).addClass('post--dimmed');
-        $(`.post--${site}`).removeClass('post--dimmed');
+        const $flag = $(evt.target);
+        if ($flag.hasClass('flag--selected')) {
+            $flag.removeClass('flag--selected');
+            $('.post').removeClass('post--dimmed');
+        } else {
+            $('.flag').removeClass('flag--selected');
+            $flag.addClass('flag--selected');
+
+            const site = $flag.attr('data-site');
+            $('.post').not(`.post--${site}`).addClass('post--dimmed');
+            $(`.post--${site}`).removeClass('post--dimmed');
+        }
     });
 });
