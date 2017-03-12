@@ -502,3 +502,37 @@ a:hover, a:visited {
 .h-full-width {
     width: 100%;
 }
+
+.navigation--image-tiles {
+    width: 1100px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-tile {
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+
+.image-tile--brighton {
+    background-image: url('/static/brighton/500_brighton_0.jpg');
+}
+
+.image-tile--bukhansan-seoul {
+    background-image: url('/static/bukhansan-seoul/500_bukhansan_0.jpg');
+}
+
+.image-tile--cassis-france {
+    background-image: url('/static/cassis-france/500_cassis_0.jpg');
+    background-position: 0 -50px;
+}
+
+.image-tile--carqueiranne-france {
+    background-image: url('/static/carqueiranne-france/500_kitesurfing_0.jpg');
+}

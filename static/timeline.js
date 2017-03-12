@@ -156,7 +156,8 @@ $(document).ready(() => {
         to: {x: 0, y: navigationHeight + navigationOffset},
         duration: 2000,
         delay: 10,
-        stiffness: 1
+        bounce: 2,
+        stiffness: 5
     });
     const bounceUp = new Bounce();
     bounceUp.translate({
@@ -164,22 +165,28 @@ $(document).ready(() => {
         to: {x: 0, y: 0},
         duration: 2000,
         delay: 10,
-        stiffness: 1
+        bounce: 2,
+        stiffness: 5
     });
 
     $navigation.css('position', 'absolute');
     $navigation.css('top', -1 * navigationHeight);
     $navigation.removeClass('h-invisible');
 
+    const $navigationBelow = $('.navigation--below-timeline');
+
     const $arrow = $('.arrow');
     $arrow.click((e) => {
         if ($arrow.hasClass('arrow--down')) {
             bounceDown.applyTo($navigation);
+            bounceDown.applyTo($navigationBelow);
             $arrow.removeClass('arrow--down')
                 .addClass('arrow--up')
                 .text('↑');
+            bounceDown.applyTo($('.foo'));
         } else {
             bounceUp.applyTo($navigation);
+            bounceUp.applyTo($navigationBelow);
             $arrow.removeClass('arrow--up')
                 .addClass('arrow--down')
                 .text('↓');
