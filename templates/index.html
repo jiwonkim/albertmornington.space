@@ -16,6 +16,7 @@
         var timelineData = JSON.parse('{{ timeline_data|safe }}');
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='timeline.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='image_tiles.js') }}"></script>
 
     <!-- external -->
     <!--link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet"-->
@@ -44,10 +45,40 @@
 
     <div class="navigation--below-timeline">
         <div class="navigation--image-tiles">
-            <div class="image-tile image-tile--brighton"></div>
-            <div class="image-tile image-tile--bukhansan-seoul"></div>
-            <div class="image-tile image-tile--cassis-france"></div>
-            <div class="image-tile image-tile--carqueiranne-france"></div>
+            <div class="image-tile image-tile--brighton">
+                <div class="image-tile_overlay h-hidden">
+                    <div class="h-flex h-justify-center h-full-width h-full-height">
+                        <a class="image-tile_link" href="{{ url_for('show_post', post_alias='brighton') }}">
+                            Read how Mornington sees Albert shirtless for the first time
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-tile image-tile--bukhansan-seoul">
+                <div class="image-tile_overlay h-hidden">
+                    <div class="h-flex h-justify-center h-full-width h-full-height">
+                        <a class="image-tile_link" href="{{ url_for('show_post', post_alias='bukhansan-seoul') }}">
+                            Read about an untimely, cold, wet hike in Korea
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-tile image-tile--carqueiranne-france">
+                <div class="image-tile_overlay h-hidden">
+                    <div class="h-flex h-justify-center h-full-width h-full-height">
+                        <a class="image-tile_link" href="{{ url_for('show_post', post_alias='carqueiranne-france') }}">
+                            Where Mornington learns to kitesurf while Albert parties at a wedding
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-tile image-tile--cassis-france">
+                <div class="image-tile_overlay h-hidden">
+                    <div class="h-flex h-justify-center h-full-width h-full-height">
+                        <a  class="image-tile_link" href="{{ url_for('show_post', post_alias='cassis-france') }}">Where Albert immediately makes up for partying alone at a wedding the previous night</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

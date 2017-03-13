@@ -156,7 +156,7 @@ $(document).ready(() => {
         to: {x: 0, y: navigationHeight + navigationOffset},
         duration: 2000,
         delay: 10,
-        bounce: 2,
+        bounce: 1,
         stiffness: 5
     });
     const bounceUp = new Bounce();
@@ -165,7 +165,7 @@ $(document).ready(() => {
         to: {x: 0, y: 0},
         duration: 2000,
         delay: 10,
-        bounce: 2,
+        bounce: 1,
         stiffness: 5
     });
 
